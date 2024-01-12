@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/sivvus-weather-symbols-2.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div
+          class="header d-flex align-items-center justify-content-around row"
+        >
+          <div class="logo col-xl-2">
+            <img src="images/earth_2.gif" alt="logo" class="text-center" />
+          </div>
+          <div class="input w-xl-50 col-xl-6">
+            <input
+              type="search"
+              name="search"
+              id="search-input"
+              class="form-control"
+              placeholder="Search For Your City..."
+            />
+          </div>
+          <div class="search-button col-xl-3 mt-2 mb-4">
+            <button id="button_location">
+              <i class="fa-solid fa-location-dot text-white"></i> Current
+              Location
+            </button>
+          </div>
+        </div>
+        <div class="current-day row gap-3">
+          <div class="city col-xl-4 day-city">
+            <div
+              class="item-1 text-center text-white d-flex flex-column justify-content-center"
+            >
+              <img
+                src="images/c6023f30971807.563b2b13a55cc.gif"
+                alt="sun"
+                class="ms-4 mb-3"
+              />
+              <h2 class="header-two" id="city"></h2>
+              <h4 class="mt-2" id="country"></h4>
+              <h4 class="mt-2" id="region"></h4>
+              <p class="mt-4" id="city_time"></p>
+              <p class="mt-4" id="date"></p>
+            </div>
+          </div>
+          <div class="current-day-detalis col-xl-8 row align-items-center">
+            <h2 class="text-white text-center mt-3 header-detalis">
+              Weather Detalis
+            </h2>
+            <div class="col-xl-3 day text-center mb-3 bg-dark info-1">
+              <div class="item-2 text-white text-center">
+                <h2 id="temprature"></h2>
+                <p id="mintemp"></p>
+                <div class="d-flex">
+                  <div class="image">
+                    <img src="images/sunrise.png" alt="sunrise" />
+                  </div>
+                  <div class="detalis col-xl-6">
+                    <h6>Sunrise</h6>
+                    <p>6:37 AM</p>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <div class="image">
+                    <img src="images/sunset.png" alt="sunrise" />
+                  </div>
+                  <div class="detalis col-xl-6">
+                    <h6>Sunset</h6>
+                    <p>20:37PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 ms-xl-5 gap-3 mb-2 info-2">
+              <div class="item img-status text-white text-center">
+                <img
+                  src="images/421f0c16071075.562a500e6ddd4.gif"
+                  alt="sun"
+                  id="image_status"
+                />
+                <h5 class="mt-xl-5" id="text">Sunny</h5>
+              </div>
+            </div>
+            <div class="col-xl-3 row ms-xl-5 text-center info-3">
+              <div class="col-xl-6">
+                <div class="item text-white">
+                  <h2><i class="fa-solid fa-water fa-beat"></i></h2>
+                  <h3 id="Humidity">41%</h3>
+                  <p>Humidity</p>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="item text-white ps-xl-5">
+                  <h2><i class="fa-solid fa-wind fa-beat"></i></h2>
+                  <h3 id="wend">2KM/h</h3>
+                  <p>WindSpeed</p>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="item text-white">
+                  <h2><i class="fa-solid fa-seedling fa-beat"></i></h2>
+                  <h3 id="pressure">997hpa</h3>
+                  <p>pressure</p>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="item text-white ps-xl-5">
+                  <h2><i class="fa-regular fa-sun fa-beat"></i></h2>
+                  <h3 id="UV">8</h3>
+                  <p>UV</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer row">
+          <div class="col-xl-3 bg-danger froeset mt-5 mb-5">
+            <h3 class="header-two text-center">3 Dayes Foreset :</h3>
+            <div
+              class="itemss d-flex justify-content-evenly align-items-center mt-4"
+            >
+              <div class="image">
+                <img
+                  src="images/sunrise.png"
+                  alt="Weather-img-status"
+                  id="current_day_img"
+                />
+              </div>
+              <div class="degree text-white">
+                <h4 id="Current_day_temp">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h4>
+              </div>
+              <div class="day text-white mt-2">
+                <p id="current-day_name">friday,5 jan</p>
+              </div>
+            </div>
+            <div
+              class="itemss d-flex justify-content-evenly align-items-center mt-4"
+            >
+              <div class="image">
+                <img
+                  src="images/sunrise.png"
+                  alt="Weather-img-status"
+                  id="day_img_next"
+                />
+              </div>
+              <div class="degree text-white">
+                <h4 id="day_temp_next">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h4>
+              </div>
+              <div class="day text-white mt-2">
+                <p id="day_next">friday,5 jan</p>
+              </div>
+            </div>
+            <div
+              class="itemss d-flex justify-content-evenly align-items-center mt-4"
+            >
+              <div class="image">
+                <img
+                  src="images/sunrise.png"
+                  alt="Weather-img-status"
+                  id="day_img_next_next"
+                />
+              </div>
+              <div class="degree text-white">
+                <h4 id="day_temp_next_next">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h4>
+              </div>
+              <div class="day text-white mt-2">
+                <p id="day_next_next">friday,5 jan</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-8 h-100 bg-danger mt-5 mb-5 ms-xl-5 gap-3 foreset-hour row justify-content-center"
+          >
+            <h2 class="header-two text-center">Hourly Froecast :</h2>
+            <div class="col-xl-2 image-houre">
+              <div class="Item">
+                <h5 class="text-white text-center">15:00</h5>
+                <img src="images/sunset.png" alt="image" id="img_Five_status" />
+                <h6 class="text-white text-center" id="temp_Five_status">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h6>
+                <h6 class="text-white text-center fa-2x">
+                  <i class="fa-solid fa-bolt"></i>
+                </h6>
+                <h6 class="text-white text-center" id="wend_Five_status">
+                  3KM/H
+                </h6>
+              </div>
+            </div>
+            <div class="col-xl-2 image-houre">
+              <div class="Item">
+                <h5 class="text-white text-center">12:00</h5>
+                <img src="images/sunset.png" alt="image" id="img_Four_status" />
+                <h6 class="text-white text-center" id="temp_Four_status">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h6>
+                <h6 class="text-white text-center fa-2x">
+                  <i class="fa-solid fa-bolt"></i>
+                </h6>
+                <h6 class="text-white text-center" id="wend_Four_status">
+                  3KM/H
+                </h6>
+              </div>
+            </div>
+            <div class="col-xl-2 image-houre">
+              <div class="Item">
+                <h5 class="text-white text-center">18:00</h5>
+                <img
+                  src="images/sunset.png"
+                  alt="image"
+                  id="img_Three_status"
+                />
+                <h6 class="text-white text-center" id="temp_Three_status">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h6>
+                <h6 class="text-white text-center fa-2x">
+                  <i class="fa-solid fa-bolt"></i>
+                </h6>
+                <h6 class="text-white text-center" id="wend_Three_status">
+                  3KM/H
+                </h6>
+              </div>
+            </div>
+            <div class="col-xl-2 image-houre">
+              <div class="Item">
+                <h5 class="text-white text-center">21:00</h5>
+                <img src="images/sunset.png" alt="image" id="img_two_status" />
+                <h6 class="text-white text-center" id="temp_two_status">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h6>
+                <h6 class="text-white text-center fa-2x">
+                  <i class="fa-solid fa-bolt"></i>
+                </h6>
+                <p class="text-white text-center" id="wend_two_status">3KM/H</p>
+              </div>
+            </div>
+            <div class="col-xl-2 image-houre">
+              <div class="Item">
+                <h5 class="text-white text-center">00:00</h5>
+                <img src="images/sunset.png" alt="image" id="img_time_1" />
+                <h6 class="text-white text-center" id="temp_time_1">
+                  22 <i class="fa-solid fa-genderless"></i> C
+                </h6>
+                <h6 class="text-white text-center fa-2x">
+                  <i class="fa-solid fa-bolt"></i>
+                </h6>
+                <h6 class="text-white text-center" id="wend_time_1">3KM/H</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-white">
+          This Project Was By
+          <a
+            href="https://www.linkedin.com/in/mahmoud-ahmed-986276196"
+            target="_blank"
+            >ENG/Mahmoud Ahmed</a
+          >
+          8/10/2024
+        </p>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
